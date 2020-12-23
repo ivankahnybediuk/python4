@@ -15,8 +15,13 @@ import random
 """
 Спросить у пользователя сколько попыток и до скольки максимум пробовать. Сделать генерацию рендомного значения столько то раз. Каждое значение вывести и потом вывести итоговое максимально выпавшее число.
 """
-# attempt = int(input('Enter a number '))
-# b = 0
-# while b < attempt:
-#     b += 1
-#     print(random.randint(0, b))
+attempt = int(input('Enter a number '))
+b = 0
+max = 0
+while b < attempt:
+    b += 1
+    rand = random.randint(0, b)
+    print(rand)
+    if rand > max:
+        max = rand
+print('Max number ', max)
